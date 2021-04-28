@@ -10,5 +10,6 @@ recognition.start();
 var transcript = event.results[0][0].transcript; 
 var confidence = event.results[0][0].confidence;
 document.getElementById("you").textContent = transcript; 
+recognition.stop();
 }; // start recognition 
 recognition.start();
