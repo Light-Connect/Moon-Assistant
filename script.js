@@ -4,12 +4,12 @@ recognition.onstart = function() {
 console.log("We are listening. Try speaking into the microphone."); 
 }; 
 recognition.onspeechend = function() { 
-recognition.start(); 
+recognition.stop();
 }
  recognition.onresult = function(event) { 
 var transcript = event.results[0][0].transcript; 
 var confidence = event.results[0][0].confidence;
 document.getElementById("you").textContent = transcript; 
-recognition.stop();
+recognition.start();
 }; // start recognition 
 recognition.start();
