@@ -3,11 +3,11 @@ var recognition = new SpeechRecognition(); // This runs when the speech recognit
 recognition.onstart = function() { 
 console.log("We are listening. Try speaking into the microphone."); 
 }; 
-/*r
-ecognition.onspeechend = function() { 
-recognition.stop();
+
+recognition.onend = function() { 
+recognition.start();
 }
-*/
+
  recognition.onresult = function(event) { 
 var transcript = event.results[0][0].transcript; 
 var confidence = event.results[0][0].confidence;
