@@ -4,7 +4,7 @@ recognition.onstart = function() {
 console.log("We are listening. Try speaking into the microphone."); 
 }; 
 recognition.onspeechend = function() { 
-recognition.stop(); 
+recognition.start(); 
 }
  recognition.onresult = function(event) { 
 var transcript = event.results[0][0].transcript; 
